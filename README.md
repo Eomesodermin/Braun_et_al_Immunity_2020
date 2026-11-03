@@ -53,6 +53,26 @@ The activating receptor CD226 is expressed on lymphocytes, monocytes, and platel
 
 ---
 
+## Repository structure
+
+```
+scRNAseq_Mouse/              # mouse tumour scRNA-seq analysis (R/ notebook, renv.lock, small example 10X input)
+Overall_survival_analysis/   # TCGA overall survival of CD226 (DNAM-1) high vs low patients (OS_analysis.Rmd)
+Moving_average_analysis/     # moving-average analysis of CD226 against genes of interest in TCGA (+ rendered HTML)
+```
+
+## Reproducing the analysis
+
+- **`scRNAseq_Mouse/`** is an `renv` project: open `scRNAseq_Mouse/scRNAseq_Mouse.Rproj`, run `renv::restore()`, then knit `R/scRNAseq_Braun_etal_Immunity_Script.Rmd`.
+- **`Overall_survival_analysis/`** and **`Moving_average_analysis/`** download TCGA data through TCGAbiolinks; knit the single notebook in each folder. A tested, documented version of these two analyses is available as functions in the helper package [`r-utility-functions`](https://github.com/Eomesodermin/r-utility-functions) (`tcga_survival()`, `moving_average()`).
+
+
+## Citation
+
+To cite the paper, use the DOI above; to cite this code, use the Zenodo DOI in the badge at the top. Machine-readable citation metadata is in [`CITATION.cff`](CITATION.cff).
+
+---
+
 ## Code Attribution  
 
 This code and analysis were authored by **Dillon Corvino** — [github.com/Eomesodermin](https://github.com/Eomesodermin) · [dilloncorvino.com](https://dilloncorvino.com).  
