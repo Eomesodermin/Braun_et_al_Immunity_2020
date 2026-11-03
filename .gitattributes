@@ -1,0 +1,2 @@
+# Rendered notebook output is not source code
+*.html linguist-generated=true
