@@ -23,9 +23,6 @@ require(car)
 require(psych)
 
 
-#Set wd to source file location
-#setwd(dirname(getActiveDocumentContext()$path))
-#getwd()
 
 
 #source("https://bioconductor.org/biocLite.R")

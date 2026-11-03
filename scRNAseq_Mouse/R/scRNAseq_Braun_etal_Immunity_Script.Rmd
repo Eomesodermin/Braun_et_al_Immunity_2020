@@ -85,12 +85,10 @@ DNAM1.dim.col <- "#A0A0A4" # Grey
 DNAM1.high.col <- "#0000C0" # Blue
 col.scheme <- c(DNAM1.neg.col, DNAM1.dim.col, DNAM1.high.col)
 
-# Set working directory to source file location
-setwd(dirname(getActiveDocumentContext()$path))
+# Work from the scRNAseq_Mouse analysis directory (located relative to the repository root)
+if (!requireNamespace("here", quietly = TRUE)) install.packages("here")
+setwd(here::here("scRNAseq_Mouse"))
 working.dir <- getwd()
-
-# amend working directory relative to script location 
-setwd("..")
 
 # create output directories
 if(!dir.exists("output")){dir.create("output", recursive = T)}

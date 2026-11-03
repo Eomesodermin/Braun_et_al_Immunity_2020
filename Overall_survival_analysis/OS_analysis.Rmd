@@ -20,9 +20,6 @@ require(gplots)
 require(TCGAbiolinks)
 require(SummarizedExperiment)
 
-#Set wd to source file location
-#setwd(dirname(getActiveDocumentContext()$path))
-#getwd()
 
 ```
 
