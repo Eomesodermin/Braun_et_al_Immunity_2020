@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/256487619.svg)](https://zenodo.org/badge/latestdoi/256487619)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5516024.svg)](https://doi.org/10.5281/zenodo.5516024)
 
 # CD155 on Tumor Cells Drives Resistance to Immunotherapy by Inducing the Degradation of the Activating Receptor CD226 in CD8+ T Cells
 
@@ -56,10 +56,14 @@ The activating receptor CD226 is expressed on lymphocytes, monocytes, and platel
 ## Repository structure
 
 ```
-scRNAseq_Mouse/              # mouse tumour scRNA-seq analysis (R/ notebook, renv.lock, small example 10X input)
+scRNAseq_Mouse/              # mouse tumour CITE-seq analysis (R/ notebook, renv.lock, and the 10X input in Data/10X/)
 Overall_survival_analysis/   # TCGA overall survival of CD226 (DNAM-1) high vs low patients (OS_analysis.Rmd)
 Moving_average_analysis/     # moving-average analysis of CD226 against genes of interest in TCGA (+ rendered HTML)
 ```
+
+## Data
+
+`scRNAseq_Mouse/Data/10X/` holds the 10X Genomics output (`matrix.mtx`, `genes.tsv`, `barcodes.tsv`; RNA plus antibody-capture features) that the mouse tumour analysis reads with `Read10X()`. It is stored as ordinary git files (about 60 MB), not Git LFS.
 
 ## Reproducing the analysis
 
